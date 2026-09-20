@@ -1,140 +1,206 @@
-# SLE - Sistema de Logística de Entrega 🚀
+######################################################
+SLE - Sistema de Logística de Entrega 🚀
+######################################################
 
-The **SLE (Logistics Delivery System)** is a centralized platform for managing logistics flows. The system enables the registration and tracking of corporate orders, ensuring full visibility of delivery statuses from origin to final destination through an intuitive interface and BI-focused dashboards.
+The **SLE (Logistics Delivery System)** is a centralized platform for managing
+logistics flows. The system enables the registration and tracking of corporate
+orders, ensuring full visibility of delivery statuses from origin to final
+destination through an intuitive interface and BI-focused dashboards.
 
----
+----
 
-## 📸 System Demonstration
+📸 System Demonstration
+==========================================
 
-### 🚛 Logistics Page (Operational)
-On this page, you can view the list of all orders, filter by status (Pending, In Transit, Delivered), and access order details including Order ID, Customer ID, and Product ID.
+🚛 Logistics Page (Operational)
+--------------------------------------------------
 
-<p align="center">
-  <img src="assets/demo-logistica.gif" alt="Logistics Page Demo" width="800">
-</p>
+On this page, you can view the list of all orders, filter by status (Pending,
+In Transit, Delivered), and access order details including Order ID, Customer
+ID, and Product ID.
 
----
+.. image:: assets/demo-logistica.gif
+   :alt: Logistics Page Demo
+   :width: 800
+   :align: center
 
-### 📊 Dashboard Page (BI & Analytics)
-On this page, administrators have access to professional dashboards built with **Recharts**. View real-time performance metrics, bar charts on delivery volume, and pie charts for status distribution, enabling data-driven strategic decisions.
+----
 
-<p align="center">
-  <img src="assets/demo-dashboard.gif" alt="Dashboard Demo" width="800">
-</p>
+📊 Dashboard Page (BI & Analytics)
+--------------------------------------------------
 
----
+On this page, administrators have access to professional dashboards built with
+**Recharts**. View real-time performance metrics, bar charts on delivery
+volume, and pie charts for status distribution, enabling data-driven strategic
+decisions.
 
-## 🛠 Tech Stack
+.. image:: assets/demo-dashboard.gif
+   :alt: Dashboard Demo
+   :width: 800
+   :align: center
+
+----
+
+🛠 Tech Stack
+==========================================
 
 - **Frontend:** Next.js (React) with TailwindCSS.
 - **Backend:** Django (Python).
 - **Visualization:** Recharts.
 - **Data:** Integrated Fake API for dynamic simulation.
 
----
+----
 
-### 🐳 How to run with Docker
+🐳 How to run with Docker
+--------------------------------------------------
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/seu-usuario/sistema-logistica-entregas.git
-cd sistema-logistica-entregas
+.. code-block:: bash
 
-# 2. Set up environment
-cp .env.example .env
-cp .env.example backend/.env
-nano .env  # edit with your settings
+   # 1. Clone the repository
+   git clone https://github.com/seu-usuario/sistema-logistica-entregas.git
+   cd sistema-logistica-entregas
 
-# 3. Start the containers
-docker compose up --build
-```
----
-### 🌐 Access URLs
+   # 2. Set up environment
+   cp .env.example .env
+   cp .env.example backend/.env
+   nano .env  # edit with your settings
 
-After starting the containers with `docker compose up`, you can access the application through the following URLs:
+   # 3. Start the containers
+   docker compose up --build
 
-| Feature | URL |
-| :--- | :--- |
-| **Logistics** | `http://localhost:3000/logistica` |
-| **Dashboard** | `http://localhost:3000/dashboard` |
-| **API (Orders)** | `http://127.0.0.1:8000/api/pedidos/` |
+----
 
-> **Note:** Ensure that your Docker containers are running before trying to access these links.
+🌐 Access URLs
+--------------------------------------------------
 
----
+After starting the containers with ``docker compose up``, you can access the
+application through the following URLs:
 
-### 🇧🇷 Versão em Português
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
 
-# SLE - Sistema de Logística de Entrega 🚀
+   * - Feature
+     - URL
+   * - **Logistics**
+     - ``http://localhost:3000/logistica``
+   * - **Dashboard**
+     - ``http://localhost:3000/dashboard``
+   * - **API (Orders)**
+     - ``http://127.0.0.1:8000/api/pedidos/``
 
-O **SLE (Sistema de Logística de Entrega)** é uma plataforma centralizada para o gerenciamento de fluxos logísticos. O sistema permite o registro e acompanhamento de pedidos de empresas, garantindo visibilidade total sobre o status das entregas, desde a origem até o destino final, através de uma interface intuitiva e dashboards focados em métricas de negócio.
+.. note::
 
----
+   Ensure that your Docker containers are running before trying to access
+   these links.
 
-## 📸 Demonstração do Sistema
+----
 
-### 🚛 Página de Logística (Operacional)
-Nesta página, você pode visualizar a listagem de todos os pedidos, filtrar por status (Pendente, Em Trânsito, Entregue) e acessar os detalhes de cada entrega, incluindo ID do pedido, cliente e produto.
+######################################################
+🇧🇷 Versão em Português
+######################################################
 
-<p align="center">
-  <img src="assets/demo-logistica.gif" alt="Página de Logística" width="800">
-</p>
+O **SLE (Sistema de Logística de Entrega)** é uma plataforma centralizada para
+o gerenciamento de fluxos logísticos. O sistema permite o registro e
+acompanhamento de pedidos de empresas, garantindo visibilidade total sobre o
+status das entregas, desde a origem até o destino final, através de uma
+interface intuitiva e dashboards focados em métricas de negócio.
 
----
+----
 
-### 📊 Página de Dashboard (BI & Analítico)
-Nesta página, os administradores têm acesso a dashboards profissionais construídos com **Recharts**. Visualize métricas de desempenho em tempo real, gráficos de barras sobre o volume de entregas e gráficos de pizza para distribuição de status.
+📸 Demonstração do Sistema
+==========================================
 
-<p align="center">
-  <img src="assets/demo-dashboard.gif" alt="Dashboard com Recharts" width="800">
-</p>
+🚛 Página de Logística (Operacional)
+--------------------------------------------------
 
----
+Nesta página, você pode visualizar a listagem de todos os pedidos, filtrar por
+status (Pendente, Em Trânsito, Entregue) e acessar os detalhes de cada entrega,
+incluindo ID do pedido, cliente e produto.
 
-## 🛠 Tecnologias Utilizadas
+.. image:: assets/demo-logistica.gif
+   :alt: Página de Logística
+   :width: 800
+   :align: center
+
+----
+
+📊 Página de Dashboard (BI & Analítico)
+--------------------------------------------------
+
+Nesta página, os administradores têm acesso a dashboards profissionais
+construídos com **Recharts**. Visualize métricas de desempenho em tempo real,
+gráficos de barras sobre o volume de entregas e gráficos de pizza para
+distribuição de status.
+
+.. image:: assets/demo-dashboard.gif
+   :alt: Dashboard com Recharts
+   :width: 800
+   :align: center
+
+----
+
+🛠 Tecnologias Utilizadas
+==========================================
 
 - **Frontend:** Next.js (React) com TailwindCSS.
 - **Backend:** Django (Python).
 - **Visualização:** Recharts.
 - **Dados:** API Fake integrada para simulação dinâmica.
 
----
+----
 
-### 🐳 Como rodar com Docker
+🐳 Como rodar com Docker
+--------------------------------------------------
 
-```bash
-#### Pré-requisitos
-- [Docker](https://docs.docker.com/get-docker/) instalado na máquina
+Pré-requisitos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#### Passos
+- `Docker <https://docs.docker.com/get-docker/>`_ instalado na máquina
 
-# 1. Clone o repositório
-git clone https://github.com/seu-usuario/sistema-logistica-entregas.git
-cd sistema-logistica-entregas
+Passos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# 2. Configure o ambiente (copie o arquivo de exemplo)
-cp .env.example .env
-cp .env.example backend/.env
+.. code-block:: bash
 
-# 3. Edite o .env com suas configurações
-nano .env
+   # 1. Clone o repositório
+   git clone https://github.com/seu-usuario/sistema-logistica-entregas.git
+   cd sistema-logistica-entregas
 
-# 4. Suba os containers (o docker-compose.yml já está configurado)
-docker compose up --build
+   # 2. Configure o ambiente (copie o arquivo de exemplo)
+   cp .env.example .env
+   cp .env.example backend/.env
 
-Acesse em http://localhost:3000
-```
----
-### 🌐 Rotas de Acesso
+   # 3. Edite o .env com suas configurações
+   nano .env
 
-Após subir os containers com `docker compose up`, você pode acessar a aplicação através das seguintes URLs:
+   # 4. Suba os containers (o docker-compose.yml já está configurado)
+   docker compose up --build
 
-| Funcionalidade | URL |
-| :--- | :--- |
-| **Logística** | `http://localhost:3000/logistica` |
-| **Dashboard** | `http://localhost:3000/dashboard` |
-| **API (Pedidos)** | `http://127.0.0.1:8000/api/pedidos/` |
+Depois, acesse em ``http://localhost:3000``.
 
-> **Nota:** Certifique-se de que os containers Docker estejam em execução antes de tentar acessar estes links.
+----
 
+🌐 Rotas de Acesso
+--------------------------------------------------
 
+Após subir os containers com ``docker compose up``, você pode acessar a
+aplicação através das seguintes URLs:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+
+   * - Funcionalidade
+     - URL
+   * - **Logística**
+     - ``http://localhost:3000/logistica``
+   * - **Dashboard**
+     - ``http://localhost:3000/dashboard``
+   * - **API (Pedidos)**
+     - ``http://127.0.0.1:8000/api/pedidos/``
+
+.. note::
+
+   Certifique-se de que os containers Docker estejam em execução antes de
+   tentar acessar estes links.
