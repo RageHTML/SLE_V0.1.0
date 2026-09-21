@@ -9,6 +9,25 @@ destination through an intuitive interface and BI-focused dashboards.
 
 ----
 
+🐳 How to run with Docker
+--------------------------------------------------
+
+.. code-block:: bash
+
+   # 1. Clone the repository
+   git clone https://github.com/seu-usuario/sistema-logistica-entregas.git
+   cd sistema-logistica-entregas
+
+   # 2. Set up environment
+   cp .env.example .env
+   cp .env.example backend/.env
+   nano .env  # edit with your settings
+
+   # 3. Start the containers
+   docker compose up --build
+
+----
+
 📸 System Demonstration
 ==========================================
 
@@ -48,25 +67,6 @@ decisions.
 - **Backend:** Django (Python).
 - **Visualization:** Recharts.
 - **Data:** Integrated Fake API for dynamic simulation.
-
-----
-
-🐳 How to run with Docker
---------------------------------------------------
-
-.. code-block:: bash
-
-   # 1. Clone the repository
-   git clone https://github.com/seu-usuario/sistema-logistica-entregas.git
-   cd sistema-logistica-entregas
-
-   # 2. Set up environment
-   cp .env.example .env
-   cp .env.example backend/.env
-   nano .env  # edit with your settings
-
-   # 3. Start the containers
-   docker compose up --build
 
 ----
 
