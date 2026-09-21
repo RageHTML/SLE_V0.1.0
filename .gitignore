@@ -24,3 +24,4 @@ frontend/.npm/
 frontend/.pnpm-debug.log*
 frontend/yarn-error.log*
 ./docker
+.env

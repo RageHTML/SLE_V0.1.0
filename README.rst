@@ -18,12 +18,7 @@ destination through an intuitive interface and BI-focused dashboards.
    git clone https://github.com/seu-usuario/sistema-logistica-entregas.git
    cd sistema-logistica-entregas
 
-   # 2. Set up environment
-   cp .env.example .env
-   cp .env.example backend/.env
-   nano .env  # edit with your settings
-
-   # 3. Start the containers
+   # 2. Start the containers
    docker compose up --build
 
 ----
