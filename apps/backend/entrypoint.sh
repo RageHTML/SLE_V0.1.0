@@ -1,10 +1,10 @@
 #!/bin/sh
-echo "Waiting for MySQL..."
+echo "Esperando o mysql"
 until nc -z db 3306; do
-  echo "Still waiting..."
+  echo "ainda esperando..."
   sleep 2
 done
-echo "MySQL is ready!"
+echo "Mysql esta ativo!"
 
 python manage.py migrate
 python manage.py runserver 0.0.0.0:8000

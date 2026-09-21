@@ -1,44 +1,41 @@
 services:
-  db:
-    image: mysql:8.0
-    container_name: db_container
+  mysql:
+    image: mysql:latest
     environment:
-      MYSQL_DATABASE: EntregasLogisticaDB
-      MYSQL_ROOT_PASSWORD: root
-    ports:
-      - "3307:3306"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: ${DATABASE_NAME:-database}
+      MYSQL_USER: ${DATABASE_USER:-user}
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD:-password}
     volumes:
-      - mysql_data:/var/lib/mysql
-    restart: unless-stopped
-
+      - ./docker/database:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
   backend:
     build:
       context: .
       dockerfile: Dockerfile.backend
     container_name: backend_container
     volumes:
-      - ./backend:/app
-    env_file:
-      - .env
+      - ./apps/backend:/docker/backend
+    depends_on:
+      - mysql
     ports:
       - "8000:8000"
-    depends_on:
-      - db
     restart: unless-stopped
-
   frontend:
     build:
       context: .
       dockerfile: Dockerfile.frontend
     container_name: frontend_container
     volumes:
-      - ./frontend:/app
+      - ./docker/frontend:/app
       - /app/node_modules
     ports:
       - "3000:3000"
     depends_on:
       - backend
     restart: unless-stopped
-
-volumes:
-  mysql_data:
+      
