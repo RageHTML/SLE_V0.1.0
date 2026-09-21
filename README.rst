@@ -9,25 +9,11 @@ destination through an intuitive interface and BI-focused dashboards.
 
 ----
 
-🐳 How to run with Docker
---------------------------------------------------
-
-.. code-block:: bash
-
-   # 1. Clone the repository
-   git clone https://github.com/seu-usuario/sistema-logistica-entregas.git
-   cd sistema-logistica-entregas
-
-   # 2. Start the containers
-   docker compose up --build
-
-----
-
 📸 System Demonstration
-==========================================
+======================================================
 
 🚛 Logistics Page (Operational)
---------------------------------------------------
+------------------------------------------------------
 
 On this page, you can view the list of all orders, filter by status (Pending,
 In Transit, Delivered), and access order details including Order ID, Customer
@@ -41,7 +27,7 @@ ID, and Product ID.
 ----
 
 📊 Dashboard Page (BI & Analytics)
---------------------------------------------------
+------------------------------------------------------
 
 On this page, administrators have access to professional dashboards built with
 **Recharts**. View real-time performance metrics, bar charts on delivery
@@ -56,17 +42,46 @@ decisions.
 ----
 
 🛠 Tech Stack
-==========================================
+======================================================
 
-- **Frontend:** Next.js (React) with TailwindCSS.
+- **Frontend:** Next.js (React) with Tailwind CSS.
 - **Backend:** Django (Python).
 - **Visualization:** Recharts.
 - **Data:** Integrated Fake API for dynamic simulation.
 
 ----
 
+🐳 How to Run with Docker
+======================================================
+
+Prerequisites
+------------------------------------------------------
+
+- `Docker <https://docs.docker.com/get-docker/>`_ installed on your machine.
+
+Steps
+------------------------------------------------------
+
+.. code-block:: bash
+
+   # 1. Clone the repository
+   git clone https://github.com/seu-usuario/sistema-logistica-entregas.git
+   cd sistema-logistica-entregas
+
+   # 2. Configure the environment (copy the example file)
+   cp .env.example .env
+   cp .env.example backend/.env
+
+   # 3. Edit the .env file with your settings
+   nano .env
+
+   # 4. Start the containers
+   docker compose up --build
+
+----
+
 🌐 Access URLs
---------------------------------------------------
+======================================================
 
 After starting the containers with ``docker compose up``, you can access the
 application through the following URLs:
@@ -96,18 +111,18 @@ application through the following URLs:
 ######################################################
 
 O **SLE (Sistema de Logística de Entrega)** é uma plataforma centralizada para
-o gerenciamento de fluxos logísticos. O sistema permite o registro e
+o gerenciamento de fluxos logísticos. O sistema permite o registro e o
 acompanhamento de pedidos de empresas, garantindo visibilidade total sobre o
-status das entregas, desde a origem até o destino final, através de uma
+status das entregas, desde a origem até o destino final, por meio de uma
 interface intuitiva e dashboards focados em métricas de negócio.
 
 ----
 
 📸 Demonstração do Sistema
-==========================================
+======================================================
 
 🚛 Página de Logística (Operacional)
---------------------------------------------------
+------------------------------------------------------
 
 Nesta página, você pode visualizar a listagem de todos os pedidos, filtrar por
 status (Pendente, Em Trânsito, Entregue) e acessar os detalhes de cada entrega,
@@ -121,12 +136,12 @@ incluindo ID do pedido, cliente e produto.
 ----
 
 📊 Página de Dashboard (BI & Analítico)
---------------------------------------------------
+------------------------------------------------------
 
 Nesta página, os administradores têm acesso a dashboards profissionais
 construídos com **Recharts**. Visualize métricas de desempenho em tempo real,
 gráficos de barras sobre o volume de entregas e gráficos de pizza para
-distribuição de status.
+distribuição de status, permitindo decisões estratégicas baseadas em dados.
 
 .. image:: assets/demo-dashboard.gif
    :alt: Dashboard com Recharts
@@ -136,25 +151,25 @@ distribuição de status.
 ----
 
 🛠 Tecnologias Utilizadas
-==========================================
+======================================================
 
-- **Frontend:** Next.js (React) com TailwindCSS.
+- **Frontend:** Next.js (React) com Tailwind CSS.
 - **Backend:** Django (Python).
 - **Visualização:** Recharts.
-- **Dados:** API Fake integrada para simulação dinâmica.
+- **Dados:** API integrada para simulação dinâmica.
 
 ----
 
-🐳 Como rodar com Docker
---------------------------------------------------
+🐳 Como Rodar com Docker
+======================================================
 
 Pré-requisitos
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------
 
-- `Docker <https://docs.docker.com/get-docker/>`_ instalado na máquina
+- `Docker <https://docs.docker.com/get-docker/>`_ instalado na máquina.
 
 Passos
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------
 
 .. code-block:: bash
 
@@ -172,12 +187,10 @@ Passos
    # 4. Suba os containers (o docker-compose.yml já está configurado)
    docker compose up --build
 
-Depois, acesse em ``http://localhost:3000``.
-
 ----
 
 🌐 Rotas de Acesso
---------------------------------------------------
+======================================================
 
 Após subir os containers com ``docker compose up``, você pode acessar a
 aplicação através das seguintes URLs:
