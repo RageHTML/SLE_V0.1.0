@@ -12,5 +12,5 @@ COPY ./apps/backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY ./apps/backend/ .
 RUN chmod +x /backend/entrypoint.sh
-EXPOSE 8888
+EXPOSE 8000
 CMD ["/backend/entrypoint.sh"]
