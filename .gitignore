@@ -23,6 +23,6 @@ frontend/build/
 frontend/.npm/
 frontend/.pnpm-debug.log*
 frontend/yarn-error.log*
-./docker
-venv
+/docker/
+/venv/
 .env
