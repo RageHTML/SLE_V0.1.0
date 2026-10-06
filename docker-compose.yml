@@ -1,11 +1,13 @@
 services:
   mysql:
     image: mysql:latest
+    env_file:
+      - .env
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      MYSQL_DATABASE: ${DATABASE_NAME:-Logistica}
-      MYSQL_USER: ${DATABASE_USER:-dono}
-      MYSQL_PASSWORD: ${DATABASE_PASSWORD:-12345678}
+      MYSQL_DATABASE: ${DATABASE_NAME}
+      MYSQL_USER: ${DATABASE_USER}
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
       - ./docker/database:/var/lib/mysql
     healthcheck:
@@ -20,14 +22,8 @@ services:
     container_name: backend_container
     volumes:
       - ./apps/backend:/docker/backend
-    environment:
-        - DEBUG=${DEBUG:-True}
-        - SECRET_KEY=${SECRET_KEY:-your_secret_key}
-        - DATABASE_NAME=${DATABASE_NAME:-Logistica}
-        - DATABASE_USER=${DATABASE_USER:-dono}
-        - DATABASE_PASSWORD=${DATABASE_PASSWORD:-12345678}
-        - DATABASE_HOST=mysql
-        - DATABASE_PORT=${DATABASE_PORT:-3306}
+    env_file:
+      - .env
     depends_on:
       - mysql
     ports:
@@ -46,4 +42,3 @@ services:
     depends_on:
       - backend
     restart: unless-stopped
-      
